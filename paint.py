@@ -15,9 +15,12 @@ frame2.grid(row=0, column=0)
 canvas = Canvas(frame2, height=500, width=1100, bg="white")
 canvas.grid(row=0, column=8)
 
-def paint():
-    canvas.create_oval(100, 100, 120, 120, fill="black")
-canvas.bind("<Button-1>", paint())
+def paint(event):
+    x = event.x
+    y = event.y
+
+    canvas.create_oval(x, y, 20, 20, fill="black")
+canvas.bind("<Button-1>", paint)
 
 
 root.resizable(False, False)
