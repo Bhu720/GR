@@ -3,7 +3,7 @@ import time
 
 limit = int(input('Enter the number of messages: '))
 msg = input('Enter the message to spam: ')
-i = 0  # Initialize
+i = 0
 time.sleep(10)
 
 while i < limit:
